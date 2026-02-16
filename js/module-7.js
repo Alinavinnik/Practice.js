@@ -55,3 +55,42 @@
 
 // const input = document.getElementById('input');
 // input.removeAttribute('disabled');
+
+// // 17 - після заголовка h1 (перед списком) додай новий елемент p і задай йому наступний текст: "Об'єктна модель документа (Document Object Model)"
+// const findH1 = document.querySelector("h1");
+// findH1.insertAdjacentHTML(
+//   "afterend",
+//   "<p>Об'єктна модель документа (Document Object Model)</p>",
+// );
+// // 18 - додай новий елемент списку у кінець списка, його заголовок це - "Властивість innerHTML" а опис (р) - "Ще один спосіб створити DOM-елементи і помістити їх в дерево - це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу". тобто, потрібно створити елемент LI потім наповнити H3 та P і готову LI закинути у кінець списку
+// const newEllem = document.createElement("li");
+// newEllem.innerHTML =
+//   "<h3>Властивість innerHTML</h3> <p>Ще один спосіб створити DOM-елементи і помістити їх в дерево - це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу</p>";
+// const liElem = document.querySelector(".list");
+// liElem.append(newEllem);
+// // 19 - зроби це саме, але використовуй шаблонні рядки та метод insertAdjacentHTML()
+// liElem.insertAdjacentHTML(
+//   "beforeend",
+//   `<li><h3>Властивість innerHTML</h3> <p>Ще один спосіб створити DOM-елементи і помістити їх в дерево - це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу</p></li>`,
+// );
+// // 20 - очисти список
+// liElem.innerHTML = "";
+
+// 1️⃣ Toggle відповідей
+// При кліку на .faq-question показувати / ховати .faq-answer
+// const btnElem = document.querySelectorAll(".faq-question");
+
+// btnElem.forEach((elem) => {
+//   elem.addEventListener("click", (e) => {
+//     e.target.nextElementSibling.classList.toggle("isHiden");
+//   });
+// });
+// 2️⃣ Делегування
+// Повішай обробник тільки на .faq.
+// Перевір, щоб працювало через event.target.
+// const divElem = document.querySelector(".faq");
+// divElem.addEventListener("click", (e) => {
+//   if (e.target.classList.contains("faq-question")) {
+//     e.target.nextElementSibling.classList.toggle("isHiden");
+//   }
+// });
