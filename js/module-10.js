@@ -175,3 +175,71 @@
 //   }
 // }
 // console.log(objWords);
+
+//Задача 1
+// Порахувати суму всіх чисел у масиві
+const numbers = [3, 7, 2, 9, 5];
+
+// результат:
+// 26
+let sumNumb = 0;
+for (const number of numbers) {
+  sumNumb += number;
+}
+console.log(sumNumb);
+
+//Задача 2
+// Порахувати скільки елементів у масиві більше 10
+const numbers2 = [4, 15, 8, 23, 7, 11];
+
+let numbMoreThanTen = 0;
+for (let num of numbers2) {
+  if (num > 10) {
+    numbMoreThanTen += 1;
+  }
+}
+console.log(numbMoreThanTen);
+
+// результат:
+// 3
+
+//Задача 3
+// Знайти найбільше число у масиві
+const numbers3 = [5, 12, 3, 20, 9];
+const theBiggestNum = numbers3.toSorted((a, b) => b - a);
+console.log(theBiggestNum[0]);
+// результат:
+// 20
+
+//Задача 4
+// Повернути новий масив де всі числа помножені на 2
+const numbers4 = [1, 2, 3, 4];
+
+const doubleNum = numbers4.reduce((acc, num) => {
+  acc.push(num * 2);
+  return acc;
+}, []);
+console.log(doubleNum);
+
+// результат:
+// [2,4,6,8]
+
+//Задача 7
+// Порахувати суму всіх значень об'єкта
+// const salaries = {
+//   John: 500,
+//   Ann: 700,
+//   Mike: 600,
+// };
+
+// const sumSalaries = Object.values(salaries).reduce((acc, s) => acc + s);
+// console.log(sumSalaries);
+
+// результат:
+// 1800
+//Задача 16
+// Знайти перший елемент який не повторюється
+const numbers7 = [2, 3, 4, 2, 3, 5, 4];
+
+// результат:
+// 5
